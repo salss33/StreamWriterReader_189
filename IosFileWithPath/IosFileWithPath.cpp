@@ -13,7 +13,7 @@ int main() {
 	//membuka file dalam mode menulis.
 	ofstream outfile;
 	// menunjuk ke sebuah nama file
-	outfile.open("contohfile.text");
+	outfile.open(NamaFile + ".txt", ios::out);
 
 	cout << ">= Menulis file, \'q\' untuk keluar" << endl;
 
@@ -33,7 +33,7 @@ int main() {
 	//Membuka file dalam mode membaca
 	ifstream infile;
 	//menunjuk sebuah file
-	infile.open("contohfile.txt");
+	infile.open(NamaFile + ".txt", ios::in);
 
 	cout << endl << ">= Membuka dan membaca file " << endl;
 	//jika file ada maka
@@ -46,7 +46,7 @@ int main() {
 			cout << baris << '\n';
 		}
 		//tutup file tersebut setelah selesai
-		infile.close()
+		infile.close();
 	}
 	//jika tidak ditemukan file maka akan menampilkan ini
 	else cout << "Unable to open file";
